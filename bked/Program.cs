@@ -9,7 +9,8 @@ builder.Services.AddControllers();
 
 // Configure the DbContext with a connection string
 builder.Services.AddDbContext<AnimeflixContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+    new MySqlServerVersion(new Version(8, 0, 21))));
 
 // Add Swagger for API documentation
 builder.Services.AddEndpointsApiExplorer();
@@ -23,7 +24,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(
+       options => options.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader()
+   );
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

@@ -7,6 +7,7 @@ const Login = () => {
     const [credenciais, setCredenciais] = useState({
         email: '',
         senha: '',
+        nome:'na',
     });
 
     const [novoUsuario, setNovoUsuario] = useState({
@@ -19,7 +20,10 @@ const Login = () => {
 
     const login = async () => {
         try {
-            const response = await api.post('/usuario/login', credenciais);
+            console.log(credenciais)
+
+            const response = await api.post('/users/login', credenciais);
+           
             const res = response.data;
 
             if (res.error) {
@@ -30,13 +34,15 @@ const Login = () => {
             localStorage.setItem('@user', JSON.stringify(res.usuario));
             window.location.reload();
         } catch (erro) {
+            console.log(erro)
             alert(erro.message);
         }
     };
 
     const cadastrar = async () => {
         try {
-            const response = await api.post('/usuario/cadastro', novoUsuario);
+            console.log(novoUsuario)
+            const response = await api.post('/users/cadastro', novoUsuario);
             const res = response.data;
 
             if (res.error) {

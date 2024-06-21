@@ -22,6 +22,10 @@ header img {
     size-adjust: 40px;
 }
 
+#logo {
+    width: 400px;
+}
+
 .btn-custom-white {
     background-color: #fff;
 }

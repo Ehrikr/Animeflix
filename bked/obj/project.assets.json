@@ -3704,11 +3704,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eric\\source\\repos\\Animeflix\\Animeflix.csproj",
+      "projectUniqueName": "C:\\Users\\Eric\\desktop\\animeflix\\bked\\Animeflix.csproj",
       "projectName": "Animeflix",
-      "projectPath": "C:\\Users\\Eric\\source\\repos\\Animeflix\\Animeflix.csproj",
+      "projectPath": "C:\\Users\\Eric\\desktop\\animeflix\\bked\\Animeflix.csproj",
       "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eric\\source\\repos\\Animeflix\\obj\\",
+      "outputPath": "C:\\Users\\Eric\\desktop\\animeflix\\bked\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
